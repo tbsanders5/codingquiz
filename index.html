@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
+
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
+    <section class="score"><a href="scores.html">View Scores</a></section>
+
+    <section class="timer">Time: <span id="time">0</span>
+    </section>
+
     <main class="container">
         <section id="first-page" class="begin">
         <h1>The Coders Challenge!</h1>
@@ -14,18 +21,22 @@
         <button id="begin">Begin The Challenge!</button>
     </section>
 
-        <section id="question">
-            <h2 id="current-question"></h2>
-            <div id="user-choices"></div>
+        <section id="questions" class="hide">
+            <h2 id="question-header"></h2>
+            <div id="user-choices" class="choices"></div>
         </section>
 
-        <section id="end-quiz">
+        <section id="end-quiz" class="hide">
             <h2>Challenge Complete!</h2>
-            <p>Congratulations on completing the challenge! Here is your score!
+            <p>Congratulations on completing the challenge! Here is your score! <span id="quiz-score"></span>
             </p>
+            <p>Enter you initials here: <input type="text" id="user-initials"/></p>
+            <button id="submit">Submit</button>
         </section>
 
+        <section id="output" class="output hide"></section>
     </main>
-    
+    <script src='./assets/script.js'></script>
+
 </body>
 </html>
